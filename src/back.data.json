@@ -1,0 +1,6 @@
+{
+    "type": "FeatureCollection", "features": [
+                { "type": "Feature", "id": "1", "properties": { "name": "415", "density": 40 }, "geometry": { "type": "Polygon", "coordinates": [[[13.085393, 47.725168], [13.088220, 47.724779], [13.088360, 47.722006], [13.086111, 47.721922]]] } },
+                { "type": "Feature", "id": "2", "properties": { "name": "416", "density": 63 }, "geometry": { "type": "Polygon", "coordinates": [[[13.085393, 47.725180], [13.088250, 47.724779], [13.088340, 47.722060], [13.086111, 47.721950]]] } }
+    ]
+}

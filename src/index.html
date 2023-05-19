@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Create a Choropleth Map - Azure Maps Web SDK Samples</title>
+    <title>Current Noiselevels at the FH Salzburg</title>
 
     <meta charset="utf-8" />
 	<link rel="shortcut icon" href="/favicon.ico"/>
@@ -19,13 +19,13 @@
     <script>
         var map, datasource, popup, maxValue = 500;
 
-        var defaultColor = '#FFEDA0';
+        var defaultColor = '#49fa51';
         var colorScale = [
-            30, '#6efa75',
-            50, '#a5cd12',
-            70, '#c29c00',
-            90, '#cf6500',
-            100, '#cb1313'
+            30, '#a0dc00',
+            50, '#cdba00',
+            70, '#eb9500',
+            90, '#fa6c11',
+            100, '#f94141'
         ];
 
         function GetMap() {
@@ -49,7 +49,7 @@
 
                     //Alternatively, use an Azure Maps key. Get an Azure Maps key at https://azure.com/maps. NOTE: The primary key should be used as the key.
                     authType: 'subscriptionKey',
-                    subscriptionKey: 'k1bs-UljWG2PGIuaoqoG8Xkl_Vf30wvm0gJQdaL5h2c'
+                    subscriptionKey: 'k1bs-UljWG2PGIuaoqoG8Xkl_Vf30wvm0gJQdaL5h2c'  //David Gahleitners personal Key (FHS Account)
                 }
             });
 
@@ -89,7 +89,7 @@
 
                         //Update the content of the popup.
                         popup.setOptions({
-                            content: '<div style="padding:10px"><b>' + properties.name + '</b><br/>Population Density: ' + properties.density + ' people/mi<sup>2</sup></div>',
+                            content: '<div style="padding:10px"><b>' + properties.name + '</b><br/>Noiselevel: ' + properties.density + ' dB</div>',
                             position: e.position
                         });
 
@@ -146,9 +146,9 @@
     </style>
 </head>
 <body onload="GetMap()">
-    <div id="myMap" style="position:relative;width:100%;min-width:290px;height:600px;"></div>
+    <div id="myMap" style="position:relative;width:100%;min-width:290px;height:100%;"></div>
 
-    <div id="legend">Population Density<br/>(people/mi<sup>2</sup>)<br/></div>
+    <div id="legend">Noiselevel<br/>(dB)<br/></div>
 
     <fieldset style="width:calc(100% - 30px);min-width:290px;margin-top:10px;">
         <legend>Create a Choropleth Map</legend>

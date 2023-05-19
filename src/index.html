@@ -21,20 +21,18 @@
 
         var defaultColor = '#FFEDA0';
         var colorScale = [
-            30, '#7bfe76',
-            50, '#f3fe76',
-            70, '#FD8D3C',
-            80, '#fede76',
-            90, '#fec376',
-            100, '#BD0026',
-            110, '#800026'
+            30, '#6efa75',
+            50, '#a5cd12',
+            70, '#c29c00',
+            90, '#cf6500',
+            100, '#cb1313'
         ];
 
         function GetMap() {
             //Initialize a map instance.
-            map = new atlas.Map('myMap', {
-                center: [-110, 50],
-                zoom: 2,
+            map = new atlas.Map('myMap', {  
+                center: [13.087251, 47.722960],
+                zoom: 17,
                 view: 'Auto',
 
                 //Add authentication details for connecting to Azure Maps.
